@@ -1,0 +1,21 @@
+[workspace]
+members = [
+  "src/base",
+  "src/engine",
+  "src/engine/shared",
+  "src/rust-bridge/test",
+]
+exclude = [
+  "bestclient-clans-api",
+  "src/mastersrv",
+  "src/masterping",
+]
+
+resolver = "2"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+lto = "thin"
+panic = "abort"
